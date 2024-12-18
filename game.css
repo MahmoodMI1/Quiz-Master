@@ -1,0 +1,30 @@
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgba(42, 157, 143, 0.25); /* Soft teal border */
+    background-color: white;
+    border-radius: 0.5rem; /* Rounded corners for a smoother look */
+    transition: transform 150ms, box-shadow 150ms;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(42, 157, 143, 0.5); /* Teal glow on hover */
+    transform: translateY(-0.1rem);
+}
+
+.choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: #2a9d8f; /* Teal background */
+    color: white;
+    font-weight: bold;
+    border-right: 0.1rem solid rgba(42, 157, 143, 0.25); /* Divider between prefix and text */
+}
+
+.choice-text {
+    padding: 1.5rem;
+    color: #444; /* Neutral text color */
+    flex-grow: 1; /* Ensures the text fills the remaining space */
+}
