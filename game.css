@@ -26,5 +26,5 @@
 .choice-text {
     padding: 1.5rem;
     color: #444; /* Neutral text color */
-    flex-grow: 1; /* Ensures the text fills the remaining space */
+    width: 100%; /* make sure it respondes when the text it clicked*/
 }
