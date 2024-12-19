@@ -72,12 +72,25 @@ choices.forEach(choice => {
     // answer choosing if we are accepting answers
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return;
-
+        // selecting answer
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"]
-        console.log(selectedAnswer);
-        getNewQuestion();
+
+        const classToApply = 
+            selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
+        // adding a class to parent element when clicked to style 
+        selectedChoice.parentElement.classList.add(classToApply);
+
+        //give a delay until we delete it
+        setTimeout( ()=>{
+            selectedChoice.parentElement.classList.remove(classToApply);
+            // add and event listener to next button 
+            getNewQuestion();
+        }, 1000)
+
+        console.log(selectedAnswer == currentQuestion.answer);
     })
 })
 startGame();

@@ -28,3 +28,10 @@
     color: #444; /* Neutral text color */
     width: 100%; /* make sure it respondes when the text it clicked*/
 }
+
+.correct {
+    background-color: #28a745;
+}
+.incorrect {
+    background-color: #dc4545;
+}
