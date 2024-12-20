@@ -3,6 +3,8 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
+const nextButton = document.getElementById("nextBtn");
+
 
 
 let currentQuestion = {};
@@ -84,13 +86,14 @@ choices.forEach(choice => {
 
         // adding a class to parent element when clicked to style 
         selectedChoice.parentElement.classList.add(classToApply);
-
+        
         //give a delay until we delete it
         setTimeout( ()=>{
             selectedChoice.parentElement.classList.remove(classToApply);
             // add and event listener to next button 
-            getNewQuestion();
+            nextButton.addEventListener('click',getNewQuestion)
         }, 1000)
+        
 
         console.log(selectedAnswer == currentQuestion.answer);
     })
