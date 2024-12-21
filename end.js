@@ -28,5 +28,5 @@ saveHighScore = (e) => {
     highScores.splice(5) // Cut everything after fifth index
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
-    window.location.assign('https://mahmoodmi1.github.io/Quiz-Master/');
+    window.location.assign('./index.html');
 };
